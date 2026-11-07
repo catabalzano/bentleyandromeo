@@ -261,40 +261,35 @@ body {
   opacity: 1; transform: translateY(0);
 }
 
-/* ── STATS ── */
-.stats {
-  background: var(--sage);
+/* ── VALUES STRIP ── */
+.values-strip {
+  background: var(--ink);
+  border-top: 1px solid rgba(245,240,232,0.07);
+  padding: 18px max(32px, env(safe-area-inset-left,0px));
   display: flex;
-  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
 }
-.stat {
-  flex: 1;
-  text-align: center;
-  padding: 32px 16px;
-  border-right: 1px solid rgba(255,255,255,0.15);
-  transition: opacity 0.6s, transform 0.6s;
-}
-.stat:last-child { border-right: none; }
-.stat-n {
-  font-family: var(--display);
-  font-size: clamp(30px, 4vw, 52px);
-  color: white;
-  display: block;
-  line-height: 1;
-}
-.stat-l {
+.values-strip span {
   font-family: var(--body);
   font-size: 10px;
   font-weight: 300;
-  letter-spacing: 0.14em;
-  color: rgba(255,255,255,0.6);
-  display: block;
-  margin-top: 6px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
+  color: rgba(245,240,232,0.55);
+  padding: 4px 20px;
+}
+.values-strip .dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(245,240,232,0.2);
+  flex-shrink: 0;
 }
 @media (max-width: 600px) {
-  .stats { flex-wrap: wrap; }
-  .stat { flex: 1 1 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .values-strip span { font-size: 9px; padding: 4px 12px; }
 }
 
 /* ── SECTION UTILS ── */
@@ -1046,11 +1041,14 @@ footer {
 </section>
 
 <!-- STATS -->
-<div class="stats" id="statsRow">
-  <div class="stat reveal" style="transition-delay:0s"><span class="stat-n">12K+</span><span class="stat-l">Followers</span></div>
-  <div class="stat reveal" style="transition-delay:0.1s"><span class="stat-n">133K</span><span class="stat-l">Monthly Impressions</span></div>
-  <div class="stat reveal" style="transition-delay:0.2s"><span class="stat-n">80K+</span><span class="stat-l">Accounts Reached</span></div>
-  <div class="stat reveal" style="transition-delay:0.3s"><span class="stat-n">1.5%</span><span class="stat-l">Engagement Rate</span></div>
+<div class="values-strip">
+  <span>Dog-led creative</span>
+  <div class="dot"></div>
+  <span>Miami-based</span>
+  <div class="dot"></div>
+  <span>Content creation</span>
+  <div class="dot"></div>
+  <span>Brand partnerships</span>
 </div>
 
 <!-- MEET BEN & RO -->

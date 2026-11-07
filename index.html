@@ -82,14 +82,17 @@ body {
 }
 .nav-logo {
   font-family: var(--script);
-  font-size: 28px;
+  font-size: 34px;
   color: var(--cream);
   text-decoration: none;
   opacity: 1;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, font-size 0.3s;
   text-align: center;
   white-space: nowrap;
   padding: 0 40px;
+}
+#nav.scrolled .nav-logo {
+  font-size: 28px;
 }
 .nav-links {
   display: flex;

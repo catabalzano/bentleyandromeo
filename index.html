@@ -200,9 +200,9 @@ body {
 .hero-line:nth-child(3) { transition-delay: 0.59s; }
 .hero-bottom {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  gap: 6px;
   flex-wrap: wrap;
   opacity: 0;
   transform: translateY(16px);
@@ -250,6 +250,7 @@ body {
   text-transform: uppercase;
   color: rgba(245,240,232,0.65);
   margin-bottom: 4px;
+  text-align: center;
 }
 .hero-content.go .hero-eyebrow,
 .hero-content.go .hero-line,
@@ -1035,7 +1036,7 @@ footer {
   <div class="hero-scrim"></div>
   <div class="hero-content" id="heroContent">
     <div class="hero-bottom">
-      <p class="hero-tagline">French Bulldog Models &amp; Content Creators · Miami</p>
+      <p class="hero-tagline">French Bulldog Models &amp; Content Creators</p>
       <p class="hero-ig">@itsbentleyandromeo &nbsp;·&nbsp; 12,000+ followers</p>
     </div>
   </div>
